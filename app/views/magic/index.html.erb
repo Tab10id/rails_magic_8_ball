@@ -1,0 +1,18 @@
+<h1>Last 10 questions</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @magic_ball_answers.each do |result| %>
+      <td><%= result.question %></td>
+      <td><%= result.answer %></td>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New question', new_question_path %>
